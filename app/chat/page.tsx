@@ -1,14 +1,10 @@
-import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 import ChatInterface from "@/components/chat-interface"
 
 export default function ChatPage() {
-  const cookieStore = cookies()
   const apiKey = process.env.GEMINI_API_KEY
-  const offlineMode = cookieStore.get("offline_mode")?.value === "true"
 
-  // If no API key and not in offline mode, redirect to error page
-  if (!apiKey && !offlineMode) {
+  if (!apiKey) {
     redirect("/api-key-error")
   }
 

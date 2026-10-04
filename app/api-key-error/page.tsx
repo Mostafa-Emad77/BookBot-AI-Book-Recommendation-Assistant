@@ -34,22 +34,10 @@ export default function ApiKeyErrorPage() {
                 <li>Redeploy your application</li>
               </ol>
             </div>
-            <div className="bg-blue-50 p-3 rounded-md border border-blue-200">
-              <h3 className="font-medium text-blue-800 mb-1">Note about Gemini API:</h3>
-              <p className="text-sm text-blue-700">
-                Some Gemini models might not be available for all API keys. If you want to try the application without
-                setting up an API key, you can use the offline mode.
-              </p>
-            </div>
           </CardContent>
-          <CardFooter className="flex justify-between">
-            <Link href="/" className="w-1/2 mr-2">
+          <CardFooter className="flex justify-center">
+            <Link href="/" className="w-full">
               <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full">Try Again</Button>
-            </Link>
-            <Link href="/chat?offline=true" className="w-1/2 ml-2">
-              <Button variant="outline" className="w-full border-gray-200 text-gray-700 hover:bg-gray-100 rounded-full">
-                Use Offline Mode
-              </Button>
             </Link>
           </CardFooter>
         </Card>
